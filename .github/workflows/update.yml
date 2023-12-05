@@ -30,7 +30,7 @@ jobs:
     - name: Install camelot dependencies
       run: sudo apt install ghostscript python3-tk -y 
     - name: Install camelot
-      run: pip install "camelot[cv]"
+      run: pip install "camelot-py[cv]"
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "PDF table extraction.ipynb" --stdout
     - name: Commit and push any changes
