@@ -29,8 +29,8 @@ jobs:
       run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib
     - name: Install camelot dependencies
       run: sudo apt install ghostscript python3-tk -y 
-    - name: Install camelot
-      run: pip install "camelot-py[cv]"
+    - name: Install camelot and the specific version of PyPDF2 we need
+      run: pip install PyPDF2==2.12.1 "camelot-py[cv]"
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "PDF table extraction.ipynb" --stdout
     - name: Commit and push any changes
