@@ -28,7 +28,7 @@ jobs:
     - name: Install the normal packages
       run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib
     - name: Install camelot dependencies
-      run: apt install ghostscript python3-tk
+      run: apt-get install ghostscript python3-tk -y 
     - name: Install camelot
       run: pip install "camelot[cv]"
     - name: Scraping today's data
